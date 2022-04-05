@@ -9,7 +9,6 @@ for (let i = 0; i < holes.length; i++) {
 
          if (killedMoles.textContent == 10) {
             alert('Победа!');
-
             killedMoles.textContent = 0;
             misseсShots.textContent = 0;
          }
