@@ -2,10 +2,7 @@ const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const second = document.getElementById("second");
 const element = document.getElementById("link");
-
-element.onclick = function () {
-   alert(location.assign("http://www.mozilla.org"));
-};
+const download = document.getElementById("download");
 
 const changeHour = function () {
    if (hour.textContent != 0) {
@@ -40,8 +37,10 @@ const changeSeconds = function () {
       }
       setTimeout(changeSeconds, 1000);
       if (second.textContent === "00" && minute.textContent === "00" && hour.textContent === "00") {
-         alert("Вы победили в конкурсе!");
-         element.onclick();
+         download.onclick = () => {
+            alert("Вы победили в конкурсе!");
+         };
+         download.click();
       }
    }
 }
