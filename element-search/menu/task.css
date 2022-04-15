@@ -4,6 +4,7 @@ body {
   font-family: Helvetica;
   font-weight: 300;
 }
+
 .menu {
   display: flex;
   list-style-type: none;
@@ -27,7 +28,17 @@ body {
   position: relative;
 }
 
+.menu__item__footer {
+  position: relative;
+}
+
 .menu_sub {
+  display: none;
+  position: absolute;
+  padding: 10px 10px 0 10px;
+}
+
+.menu_sub__footer {
   display: none;
   position: absolute;
   padding: 10px 10px 0 10px;
