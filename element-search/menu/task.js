@@ -19,3 +19,16 @@ menuLinkFooter.forEach(element => {
       element.querySelector(".menu_sub__footer").classList.toggle('menu_active');
    }
 });
+
+document.onclick = (event) => {
+   if (event.target.className !== 'menu__item') {
+      document.querySelectorAll(".menu_sub").forEach(element => {
+         element.classList.remove('menu_active')
+      });
+   }
+
+   if (event.target.className !== 'menu__item__footer')
+      document.querySelectorAll(".menu_sub__footer").forEach(element => {
+         element.classList.remove('menu_active')
+      });
+}
