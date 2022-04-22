@@ -1,11 +1,13 @@
-const menuLink = Array.from(document.querySelectorAll(".menu__item"));
+const menuItem = Array.from(document.querySelectorAll(".menu__item"));
 
-menuLink.forEach(element => {
+menuItem.forEach(element => {
    element.onclick = () => {
       document.querySelectorAll(".menu_sub").forEach(element => {
          element.classList.remove('menu_active')
       });
-      element.querySelector(".menu_sub").classList.toggle('menu_active');
+      if (element.querySelector(".menu_sub")) {
+         element.querySelector(".menu_sub").classList.toggle('menu_active');
+      }
    }
 });
 
